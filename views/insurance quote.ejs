@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Request an Insurance Quote | Roadster Revival</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #f8f8f8;
+        }
+
+        h2 {
+            color: #f1c40f;
+            font-size: 28px;
+            border-bottom: 2px solid #f8f8f8;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #ddd;
+            margin-top: 10px;
+            display: block;
+            font-size: 16px;
+        }
+
+        input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background-color: #f1c40f;
+            color: #1a1a1a;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .section-divider {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-top: 1px solid #444;
+        }
+
+        /* Styling for links */
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive layout */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Request an Insurance Quote</h1>
+        <p style="font-size: 16px; color: #ddd; text-align: center;">Fill in your vehicle details below to receive a tailored insurance quote for your car.</p>
+
+        <form action="/submit-insurance-quote" method="POST">
+
+            <!-- Vehicle Details Section -->
+            <h2>Vehicle Details</h2>
+
+            <label for="make">1. Car Make</label>
+            <input type="text" id="make" name="make" required>
+
+            <label for="model">2. Car Model</label>
+            <input type="text" id="model" name="model" required>
+
+            <label for="year">3. Year of Manufacture</label>
+            <input type="number" id="year" name="year" required>
+
+            <label for="vin">4. Vehicle Identification Number (VIN)</label>
+            <input type="text" id="vin" name="vin" required>
+
+            <label for="mileage">5. Mileage (in miles or kilometers)</label>
+            <input type="number" id="mileage" name="mileage" required>
+
+            <label for="fuel-type">6. Fuel Type</label>
+            <select id="fuel-type" name="fuel_type" required>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Electric">Electric</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+
+            <label for="transmission">7. Transmission Type</label>
+            <select id="transmission" name="transmission" required>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+            </select>
+
+            <label>8. Vehicle Condition</label>
+            <div class="radio-group">
+                <input type="radio" id="condition-excellent" name="condition" value="Excellent" required>
+                <label for="condition-excellent">Excellent</label>
+                <input type="radio" id="condition-good" name="condition" value="Good" required>
+                <label for="condition-good">Good</label>
+                <input type="radio" id="condition-fair" name="condition" value="Fair" required>
+                <label for="condition-fair">Fair</label>
+                <input type="radio" id="condition-poor" name="condition" value="Poor" required>
+                <label for="condition-poor">Poor</label>
+            </div>
+
+            <label for="previous-insurance">9. Previous Insurance Provider</label>
+            <input type="text" id="previous-insurance" name="previous_insurance">
+
+            <!-- Divider -->
+            <div class="section-divider"></div>
+
+            <!-- Contact Information Section -->
+            <h2>Your Contact Information</h2>
+
+            <label for="full-name">10. Full Name</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="email">11. Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">12. Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">13. Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Get My Insurance Quote</button>
+        </form>
+
+        <p style="font-size: 14px; text-align: center; margin-top: 30px;">By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+    </div>
+
+</body>
+</html>

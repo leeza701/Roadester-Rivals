@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roadster Revival | Twitter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Full Screen Background */
+        .background {
+            background: url('https://via.placeholder.com/1500x1000?text=Elegant+Roadster+Revival') no-repeat center center/cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-attachment: fixed;
+        }
+
+        /* Overlay on Background for Contrast */
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Transparent black for darkening the background */
+        }
+
+        /* Contact Box Styling */
+        .contact-box {
+            position: relative;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            font-size: 28px;
+            color: #1DA1F2; /* Twitter Blue Color */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            display: inline-block;
+            font-size: 18px;
+            color: #1DA1F2; /* Twitter Blue Color */
+            text-decoration: none;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0d95e8;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        /* Button Style */
+        .btn {
+            display: inline-block;
+            background-color: #1DA1F2; /* Twitter Blue */
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0d95e8; /* Darker Twitter Blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Full Screen Background Section -->
+    <div class="background">
+        <div class="background-overlay"></div>
+        <div class="contact-box">
+            <h3>Contact Info - Roadster Revival</h3>
+            <p class="contact-info">Roadster Revival is a brand committed to bringing back the glory of classic roadster cars. We focus on restoration, performance upgrades, and style, combining the past with the present.</p>
+            <p class="contact-info">Stay updated with our latest projects, behind-the-scenes, and special offers by following us on Twitter.</p>
+            <a href="https://twitter.com/RoadsterRevival" target="_blank" class="btn">
+                <i class="fab fa-twitter"></i> Follow Us on Twitter
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

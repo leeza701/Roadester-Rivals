@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roadster Revival - Car Selling Facility</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reset and Box Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 48px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* Content Section */
+        .content-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            gap: 20px;
+        }
+
+        /* Text Content Styling */
+        .content-text {
+            width: 60%;
+            font-size: 18px;
+            color: #ccc;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        /* Car Image Styling */
+        .car-images {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .car-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 15px 25px;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 1024px) {
+            .content-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content-text, .car-images {
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .content-text {
+                font-size: 16px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .car-images img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .car-images {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .btn {
+                padding: 15px 30px;
+                font-size: 18px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .content-text {
+                font-size: 14px;
+            }
+
+            .car-images img {
+                margin-bottom: 10px;
+            }
+
+            .btn {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Heading Section -->
+       
+        <h2>Your Trusted Platform for Selling Classic Cars</h2>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <!-- Text Section -->
+            <div class="content-text">
+                <p>
+                    At **Roadster Revival**, we understand the passion and nostalgia that comes with owning a classic car. Whether you’re looking to part ways with your vintage automobile or you're simply looking to upgrade to a newer model, we offer a seamless, transparent, and stress-free experience for selling your car. Our expert team of appraisers will evaluate your vehicle's true worth and offer you the best deal on the market.
+                </p>
+                <p>
+                    Selling your classic car with Roadster Revival is straightforward: get a free, professional appraisal, sign the necessary paperwork, and we’ll handle the rest. We connect you with a global network of buyers, enthusiasts, and collectors who value the history, craftsmanship, and rarity of your car. We make sure the transaction is smooth, secure, and fast, so you can get the best price for your car without the hassle.
+                </p>
+                <p>
+                    From high-performance Porsche models to vintage Jaguars and limited-edition Mustangs, we specialize in all kinds of classic vehicles. Our goal is simple: to offer you a trusted platform where you can sell your car at the best possible price, quickly and easily.
+                </p>
+                <a href="Valuation.html" class="btn">Get a Free Valuation</a>
+            </div>
+
+            <!-- Car Images Section -->
+            <div class="car-images">
+               
+                <img src="image/AUDI 2.jfif.jpg" alt="Classic Car 2">
+                <img src="image/BMW 6.jpg" alt="Classic Car 3">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

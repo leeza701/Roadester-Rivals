@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= user.username %> | Roadster-Rivals</title>
+  <link rel="stylesheet" href="/stylesheets/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+      color: #333;
+    }
+
+    .upbtn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      padding: 10px 18px;
+      background-color: #ff4b2b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .upbtn:hover {
+      background-color: #e8432f;
+    }
+
+    .profile-main {
+      max-width: 800px;
+      margin: 100px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .profile-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-image img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 10px 0 5px;
+    }
+
+    .username {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .profile-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .share-btn, .edit-btn, .edit-btn2 {
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .share-btn {
+      background-color: #0077ff;
+      color: white;
+    }
+
+    .share-btn:hover {
+      background-color: #005fd1;
+    }
+
+    .edit-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background-color: #1e8635;
+    }
+
+    .edit-btn2 {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .edit-btn2:hover {
+      background-color: #c82333;
+    }
+
+    .form {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <a href="/logout" class="upbtn">Logout</a>
+  <main class="profile-main">
+    <div class="profile-header">
+      <div class="profile-image">
+        <img src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" alt="Profile" />
+        <a href="" class="edit-icon"><i class="fas fa-pencil-alt"></i></a> 
+        
+      </div>
+      <h1><%= user.username %></h1>
+      <p class="username">@<%= user.username %></p>
+       <!-- <p class="followers"><span><%= user.followers || 0 %></span> followers • <span><%= user.following || 0 %></span> following</p>  -->
+
+      <div class="profile-actions">
+        <a href="/feed" class="share-btn"><i class="fas fa-car"></i> My Cars</a>
+        <a href="/edit/<%= user._id %>" class="edit-btn"><i class="fas fa-user-edit"></i> Edit Profile</a>
+        <form action="/delete/<%= user._id %>" method="post" class="form">
+          <button type="submit" class="edit-btn2" id="btn2" onclick="return confirm('Are you sure you want to delete your profile?')">
+            <i class="fas fa-trash"></i> Delete Profile
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

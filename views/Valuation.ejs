@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sell Your Car - Get a Free Valuation | Roadster Revival</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #f8f8f8;
+        }
+
+        h2 {
+            color: #f1c40f;
+            font-size: 28px;
+            border-bottom: 2px solid #f8f8f8;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #ddd;
+            margin-top: 10px;
+            display: block;
+            font-size: 16px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .radio-group label {
+            font-size: 16px;
+            margin-right: 20px;
+        }
+
+        .submit-btn {
+            background-color: #f1c40f;
+            color: #1a1a1a;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .section-divider {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-top: 1px solid #444;
+        }
+
+        /* Styling for links */
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sell Your Car – Get a Free Valuation</h1>
+        <p style="font-size: 16px; color: #ddd; text-align: center;">Fill out the form below with accurate details, and our experts will get back to you with a free valuation estimate for your car.</p>
+
+        <form action="/submit-valuation" method="POST">
+            <h2>Car Details</h2>
+
+            <label for="make">1. Car Make</label>
+            <input type="text" id="make" name="make" required>
+
+            <label for="model">2. Car Model</label>
+            <input type="text" id="model" name="model" required>
+
+            <label for="year">3. Year of Manufacture</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="mileage">4. Mileage (miles or kilometers)</label>
+            <input type="text" id="mileage" name="mileage" required>
+
+            <label for="vin">5. Vehicle Identification Number (VIN)</label>
+            <input type="text" id="vin" name="vin" required>
+
+            <label>6. Condition</label>
+            <div class="radio-group">
+                <input type="radio" id="condition-excellent" name="condition" value="Excellent">
+                <label for="condition-excellent">Excellent</label>
+                <input type="radio" id="condition-good" name="condition" value="Good">
+                <label for="condition-good">Good</label>
+                <input type="radio" id="condition-fair" name="condition" value="Fair">
+                <label for="condition-fair">Fair</label>
+                <input type="radio" id="condition-poor" name="condition" value="Poor">
+                <label for="condition-poor">Poor</label>
+            </div>
+
+            <label>7. Exterior Condition</label>
+            <div class="radio-group">
+                <input type="radio" id="exterior-excellent" name="exterior_condition" value="Excellent">
+                <label for="exterior-excellent">Excellent</label>
+                <input type="radio" id="exterior-minor" name="exterior_condition" value="Minor scratches">
+                <label for="exterior-minor">Minor scratches</label>
+                <input type="radio" id="exterior-dents" name="exterior_condition" value="Some dents">
+                <label for="exterior-dents">Some dents</label>
+                <input type="radio" id="exterior-heavy" name="exterior_condition" value="Heavy damage">
+                <label for="exterior-heavy">Heavy damage</label>
+            </div>
+
+            <label>8. Interior Condition</label>
+            <div class="radio-group">
+                <input type="radio" id="interior-excellent" name="interior_condition" value="Excellent">
+                <label for="interior-excellent">Excellent</label>
+                <input type="radio" id="interior-minor" name="interior_condition" value="Minor wear">
+                <label for="interior-minor">Minor wear</label>
+                <input type="radio" id="interior-significant" name="interior_condition" value="Significant wear">
+                <label for="interior-significant">Significant wear</label>
+                <input type="radio" id="interior-heavy" name="interior_condition" value="Heavy damage">
+                <label for="interior-heavy">Heavy damage</label>
+            </div>
+
+            <label>9. Accident History</label>
+            <div class="radio-group">
+                <input type="radio" id="accident-no" name="accident_history" value="No">
+                <label for="accident-no">No</label>
+                <input type="radio" id="accident-yes" name="accident_history" value="Yes">
+                <label for="accident-yes">Yes (Please provide details below)</label>
+            </div>
+
+            <label for="modifications">10. Modifications (If any)</label>
+            <input type="text" id="modifications" name="modifications">
+
+            <label for="service-history">11. Service History</label>
+            <input type="text" id="service-history" name="service_history">
+
+            <label for="ownership-history">12. Ownership History</label>
+            <select id="ownership-history" name="ownership_history">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 or more</option>
+            </select>
+
+            <label for="asking-price">13. Asking Price (Optional)</label>
+            <input type="text" id="asking-price" name="asking_price">
+
+            <!-- Divider -->
+            <div class="section-divider"></div>
+
+            <!-- Contact Information Section -->
+            <h2>Your Contact Information</h2>
+
+            <label for="full-name">14. Full Name</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="email">15. Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">16. Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="location">17. Location</label>
+            <input type="text" id="location" name="location" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Your Valuation Request</button>
+        </form>
+
+        <p style="font-size: 14px; text-align: center; margin-top: 

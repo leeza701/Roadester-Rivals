@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="/stylesheets/edit.css"> <!-- Optional CSS -->
+</head>
+<body>
+  <div class="container">
+    <h1>Edit Your Profile</h1>
+    <form action="/users/<%= users._id %>" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" value="<%= users.username %>" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" value="<%= users.email %>" required>
+
+      <!-- <label for="email">image url</label>
+      <input type="text" id="email" name="email" value="<%= users.name %>" required> -->
+
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</body>
+</html>

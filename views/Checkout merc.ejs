@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MERCEDEZ BENS 400 Details</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centers the content */
+            margin: 0;
+        }
+
+        /* Main Box Styling */
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .box {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 350px; /* Fixed width for the box */
+            text-align: center;
+            display: flex;
+            flex-direction: column; /* Stack the image and content vertically */
+            justify-content: flex-start; /* Align items to the top */
+            height: auto; /* Allow flexible height */
+        }
+
+        .box img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #f4f4f4;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .price span {
+            font-weight: bold;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .modal p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .modal img {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 15px;
+        }
+
+        .close {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .close:hover {
+            background-color: #c0392b;
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .swiper-slide {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 90%;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <div class="swiper-slide box">
+        <img src="image/MERCEDEZ BENZ 1.jpg" alt="BMW 327">
+        <div class="content">
+            <h3>MERCEDEZ BENS 400</h3>
+            <div class="price"> <span>price : </span> ₹7,80,000/- </div>
+            <p>
+                new
+                <span class="fas fa-circle"></span> 1946
+                <span class="fas fa-circle"></span> Automatic
+                <span class="fas fa-circle"></span> petrol
+                <span class="fas fa-circle"></span> 196mph
+            </p>
+            <a href="#" class="btn" id="checkOutBtn">Check Out</a>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <h2>MERCEDEZ BENZ 400 Details</h2>
+            <img src="image/MERCEDEZ BENZ 1.jpg" alt="BMW 327">
+            <p><strong>Price:</strong> ₹7,80,000/-</p>
+            <p><strong>Model Year:</strong> 1946</p>
+            <p><strong>Transmission:</strong> Automatic</p>
+            <p><strong>Fuel Type:</strong> Petrol</p>
+            <p><strong>Top Speed:</strong> 196mph</p>
+            <p><strong>Description:</strong> The Mercedes-Benz 400 is the epitome of luxury, performance, and cutting-edge engineering. Beneath its elegant exterior lies a 3.0-liter V6 engine that delivers an impressive 329 horsepower and 480 Nm of torque, providing a powerful yet smooth driving experience. This robust engine is paired with an advanced 9-speed automatic transmission, ensuring seamless shifts and responsive acceleration. With its superior aerodynamics and sophisticated suspension system, the Mercedes-Benz 400 effortlessly glides on the road, offering a perfect balance of comfort and agility. Despite its performance capabilities, the car maintains respectable fuel efficiency, averaging around 22-24 mpg on highways, making it both a thrill to drive and practical for long journeys.</p>
+            <button class="close" id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Get modal element and buttons
+        const modal = document.getElementById('carModal');
+        const checkOutBtn = document.getElementById('checkOutBtn');
+        const closeModalBtn = document.getElementById('closeModal');
+
+        // Show the modal when "Check Out" button is clicked
+        checkOutBtn.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent the default anchor behavior
+            modal.style.display = 'flex';
+        });
+
+        // Close the modal when "Close" button is clicked
+        closeModalBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        // Close the modal if user clicks anywhere outside the modal
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Request a Repair Quote | Roadster Revival</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            color: #f8f8f8;
+        }
+
+        h2 {
+            color: #f1c40f;
+            font-size: 28px;
+            border-bottom: 2px solid #f8f8f8;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #ddd;
+            margin-top: 10px;
+            display: block;
+            font-size: 16px;
+        }
+
+        input[type="text"], input[type="number"], input[type="email"], input[type="tel"], textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background-color: #f1c40f;
+            color: #1a1a1a;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .section-divider {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-top: 1px solid #444;
+        }
+
+        /* Styling for links */
+        a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive layout */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .submit-btn {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Request a Repair Quote</h1>
+        <p style="font-size: 16px; color: #ddd; text-align: center;">Provide details about the part requiring repair, and we'll give you a free repair quote.</p>
+
+        <form action="/submit-repair-quote" method="POST">
+
+            <!-- Part Details Section -->
+            <h2>Part Details</h2>
+
+            <label for="part-name">1. Part Name</label>
+            <input type="text" id="part-name" name="part_name" required>
+
+            <label for="part-number">2. Part Number</label>
+            <input type="text" id="part-number" name="part_number" required>
+
+            <label for="part-description">3. Part Description</label>
+            <textarea id="part-description" name="part_description" rows="4" required></textarea>
+
+            <label for="quantity">4. Quantity (if applicable)</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="issue-description">5. Issue Description</label>
+            <textarea id="issue-description" name="issue_description" rows="4" required></textarea>
+
+            <!-- Contact Information Section -->
+            <div class="section-divider"></div>
+            <h2>Your Contact Information</h2>
+
+            <label for="full-name">6. Full Name</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="email">7. Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">8. Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="location">9. Location (City, State)</label>
+            <input type="text" id="location" name="location" required>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Get Repair Quote</button>
+        </form>
+
+        <p style="font-size: 14px; text-align: center; margin-top: 30px;">By submitting this form, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+    </div>
+
+</body>
+</html>
